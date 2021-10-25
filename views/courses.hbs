@@ -1,0 +1,38 @@
+<h1>Courses</h1>
+
+{{#if courses.length}}
+{{#each courses}} 
+  <div class="row">
+    <div class="col s4 offset-s3">
+      <div class="card">
+        <div class="card-image">
+          <a href="/courses/{{ id }}" target="_blank"><img src="{{ img }}" alt="{{ title }}"></a> 
+        </div>
+        <div class="card-content" style="text-align: center;">
+          <span class="card-title">{{ title }}</span>
+          <p class="price">{{ price }}</p>
+        </div>
+        <div class="card-action" style="text-align: center;  padding-right: 5px">
+          <a href="/courses/{{ id }}" target="_blank">Open course</a> 
+          {{#if @root.isAuth}} {{!-- go outside this hbs --}}
+
+
+            {{#ifeq userId._id @root.userId}}
+              <a href="/courses/{{ id }}/edit?allow=true">Edit course</a> {{!-- edit page --}}
+            {{/ifeq}}
+
+            <form action="/card/add" method="POST" >
+              <input type="hidden" name="_csrf" value="{{ @root.csrf }}">
+              <input type="hidden" name="id" value="{{id}}">
+              <button type="submit" class="btn btn-primary">Buy</button>
+            </form>
+            
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}
+{{else}}
+<p>No courses yet</p>
+{{/if}}
