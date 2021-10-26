@@ -1,5 +1,5 @@
 # Courses Shop
-**using Node.js (MongoDB, Express, sequilize)**
+**using Node.js (MongoDB, Express, sequelize)**
 
 ***
 
