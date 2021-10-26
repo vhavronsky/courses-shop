@@ -3,6 +3,10 @@
 
 ***
 
+In this project you will find a shop where you can register, buy a course, add it to the cart, make your own course, get email and more
+
+***
+
 you can checkout things like:
 
 - sessions and autharization
