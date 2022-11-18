@@ -9,7 +9,7 @@ In this project you will find a shop where you can register, buy a course, add i
 
 you can checkout things like:
 
-- sessions and autharization
+- sessions and authorization
     * password encryption
     * CSRF-protection
     * sessions in database
@@ -19,7 +19,7 @@ you can checkout things like:
     * password reset
 - validation and files
     * async validators
-    * 404 error handling
+    * error handling
     * file uploading
 
 ---
